@@ -63,7 +63,8 @@ public class McD {
 
 		WebElement subscribeButton = driver.findElement(By.id("g-recaptcha-btn-2"));
 		subscribeButton.click();
-		Thread.sleep(3000);
+		Thread.sleep(12000);
+		
 
 		//driver.close();
 
@@ -73,7 +74,7 @@ public class McD {
 		// System.out.println("Test Failed");
 		// }
 		 driver.close();
-		 Thread.sleep(5000);
+		 
 	}
 		@Test
 		public void testCase3() throws InterruptedException {
