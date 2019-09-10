@@ -77,4 +77,33 @@ public class McD {
 		 
 	}
 	
+	@Test
+	public void testCase3() throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver","/Users/macstudent/Desktop/chromedriver");
+		WebDriver driver = new ChromeDriver();
+		String baseUrl = "https://www.mcdonalds.com/ca/en-ca.html";
+		driver.get(baseUrl);
+		driver.findElement(By.xpath("//*[@id=\"maincontent\"]/div[2]/div[2]/div/div[1]/div/a")).click();
+		Thread.sleep(1500);
+		
+		WebElement firstnameBox = driver.findElement(By.id("firstname2"));
+		Thread.sleep(500);
+		firstnameBox.sendKeys("");
+		Thread.sleep(1000);
+
+		WebElement emailBox = driver.findElement(By.id("email2"));
+		emailBox.sendKeys("");
+		Thread.sleep(1000);
+		
+		
+		WebElement postalBox = driver.findElement(By.id("postalcode2"));
+		postalBox.sendKeys("");
+		Thread.sleep(1000);
+
+		WebElement subscribeButton = driver.findElement(By.id("g-recaptcha-btn-2"));
+		subscribeButton.click();
+
+	
+}
+
 }
